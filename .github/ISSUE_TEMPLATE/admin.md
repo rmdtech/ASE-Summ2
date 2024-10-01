@@ -1,4 +1,4 @@
-﻿---
+---
 name: Admin
 about: Document admin work that needs to be completed as part of this project
 title: "[ADMIN]"
