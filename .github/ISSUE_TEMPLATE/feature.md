@@ -1,4 +1,4 @@
-﻿---
+---
 name: Feature
 about: Add a feature to this project
 title: "[FEATURE]"
