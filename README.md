@@ -1,3 +1,33 @@
+# Project Overview
+## Project Requirements
+### 1. User Interface (UI) 🖥️
+- **Input Field for Amount**: Users should be able to input the amount they want to convert.
+- **Selection method for Currencies**: A method is required for selecting the source currency and another for the target currency.
+- **Convert Button**: A button to trigger the conversion process.
+- **Result Display**: A field or label to show the converted amount.
+  
+### 2. Currency Data 💵
+- **Currency List**: At a minimum, include major currencies such as USD, EUR, GBP, JPY, etc.
+- **Live Exchange Rates**: Fetch live exchange rates from an API
+
+### 3. Backend Logic ⚙️
+- **Conversion Formula**: Implement a basic conversion formula:  
+  `Converted Amount = Amount * Exchange Rate`
+- **Fetch Exchange Rates**: Integrate API calls to retrieve current exchange rates.
+
+### 4. Validation ✅
+- **Input Validation**: Ensure the user enters valid numbers in the amount field.
+- **Currency Selection Validation**: Ensure different source and target currencies are selected.
+
+### 5. Error Handling ⛔
+- **Network Errors**: Display appropriate error messages if there's an issue fetching exchange rates.
+- **Input Errors**: Display user-friendly error messages for invalid inputs or selections.
+
+### 6. Non-functional Requirements ⏩
+- **Responsive Design**: The application should be usable on both desktop and mobile devices.
+- **Performance**: The conversion process should be quick, ideally under 1 second.
+- **Accessibility**: Ensure keyboard navigation and screen reader support.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
