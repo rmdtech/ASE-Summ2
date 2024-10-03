@@ -1,5 +1,8 @@
 # Project Overview
-## Project Requirements
+## Project Introduction 💰
+The purpose of this project is to develop a simple yet functional currency converter application, which can be integrated into the workflow at my workplace. The tool will allow users to convert a specified amount of money between two selected currencies, using exchange rates fetched from an external API. The project aims to provide an intuitive user interface and fast, accurate conversions.
+
+## Project Requirements 🎯
 ### 1. User Interface (UI) 🖥️
 - **Input Field for Amount**: Users should be able to input the amount they want to convert.
 - **Selection method for Currencies**: A method is required for selecting the source currency and another for the target currency.
@@ -28,6 +31,13 @@
 - **Responsive Design**: The application should be usable on both desktop and mobile devices.
 - **Performance**: The conversion process should be quick, ideally under 1 second.
 - **Accessibility**: Ensure keyboard navigation and screen reader support.
+
+## Project Stakeholders 👩‍💼
+| Role    | Responsibility | Notes |
+| -------- | ------- | ------- |
+| Project Manager  | Overall project oversight    | Since this is a solo development project, I will take on the role of project manager   |
+| Developer | Application development     | Since this is a solo development project, I will take on the role of developer   |
+| Analyst    | Client representative and sign-off    | Feedback will be sought from workplace analysts where possible    |
 
 # Getting Started with Create React App
 
