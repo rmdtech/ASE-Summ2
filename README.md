@@ -5,6 +5,7 @@
 - **Selection method for Currencies**: A method is required for selecting the source currency and another for the target currency.
 - **Convert Button**: A button to trigger the conversion process.
 - **Result Display**: A field or label to show the converted amount.
+- **Swap Currencies**: As requested by stakeholders as part of feedback on existing requirements, a "swap currencies" functionality was requested, to swap To/From currency selection for conversion. 
   
 ### 2. Currency Data 💵
 - **Currency List**: At a minimum, include major currencies such as USD, EUR, GBP, JPY, etc.
