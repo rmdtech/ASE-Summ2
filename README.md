@@ -45,6 +45,34 @@ To correctly define each requirement, the following criteria were used for each 
 
 ![MoSCoW Requirements](https://github.com/user-attachments/assets/12b7bcbe-ae10-48f0-b08d-c8a7ad6bc5ae)
 
+## User Stories 👤
+To ensure a comprehensive understanding of the listed project requirements, I have drawn up a list of user stories which cover the planned functionality. The aim of this is to clarify requirements and ensure there is no accidental scope creep later in the project. Defining user stories at the planning stage helps to make sure that I can write tickets to strict requirements with clearly defined objectives.
+
+### User Story 1: Basic Currency Conversion
+**As a** user  
+**I want** to convert a specific amount of money from one currency to another and have the result displayed on screen  
+**So that** I can quickly see how much the amount is worth in a different currency.  
+
+### User Story 2: Currency Pair Switching
+**As a** user  
+**I want** to quickly switch the selected currencies  
+**So that** I can reverse the conversion without manually reselecting currencies.  
+
+### User Story 3: Input Validation
+**As a** user  
+**I want** the application to notify me if I enter invalid input (e.g., non-numeric values)  
+**So that** I can correct my mistakes and complete the conversion successfully.  
+
+### User Story 4: Currency Selection
+**As a** user  
+**I want** to select a currency from a predetermined list  
+**So that** I do not need to memorise every single currency code available.  
+
+### User Story 5: Responsive Design
+**As a** mobile phone user  
+**I want** the webapp to be easy to use and navigate on my smartphone  
+**So that** I can perform currency conversions whilst away from my computer.  
+
 
 ## Project Stakeholders 👩‍💼
 | Role    | Responsibility | Notes |
