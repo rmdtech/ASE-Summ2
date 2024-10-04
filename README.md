@@ -3,34 +3,46 @@
 The purpose of this project is to develop a simple yet functional currency converter application, which can be integrated into the workflow at my workplace. The tool will allow users to convert a specified amount of money between two selected currencies, using exchange rates fetched from an external API. The project aims to provide an intuitive user interface and fast, accurate conversions.
 
 ## Project Requirements 🎯
-### 1. User Interface (UI) 🖥️
+#### 1. User Interface (UI) 🖥️
 - **Input Field for Amount**: Users should be able to input the amount they want to convert.
 - **Selection method for Currencies**: A method is required for selecting the source currency and another for the target currency.
 - **Convert Button**: A button to trigger the conversion process.
 - **Result Display**: A field or label to show the converted amount.
 - **Swap Currencies**: As requested by stakeholders as part of feedback on existing requirements, a "swap currencies" functionality was requested, to swap To/From currency selection for conversion. 
   
-### 2. Currency Data 💵
+#### 2. Currency Data 💵
 - **Currency List**: At a minimum, include major currencies such as USD, EUR, GBP, JPY, etc.
 - **Live Exchange Rates**: Fetch live exchange rates from an API
 
-### 3. Backend Logic ⚙️
+#### 3. Backend Logic ⚙️
 - **Conversion Formula**: Implement a basic conversion formula:  
   `Converted Amount = Amount * Exchange Rate`
 - **Fetch Exchange Rates**: Integrate API calls to retrieve current exchange rates.
 
-### 4. Validation ✅
+#### 4. Validation ✅
 - **Input Validation**: Ensure the user enters valid numbers in the amount field.
 - **Currency Selection Validation**: Ensure different source and target currencies are selected.
 
-### 5. Error Handling ⛔
+#### 5. Error Handling ⛔
 - **Network Errors**: Display appropriate error messages if there's an issue fetching exchange rates.
 - **Input Errors**: Display user-friendly error messages for invalid inputs or selections.
 
-### 6. Non-functional Requirements ⏩
+#### 6. Non-functional Requirements ⏩
 - **Responsive Design**: The application should be usable on both desktop and mobile devices.
 - **Performance**: The conversion process should be quick, ideally under 1 second.
 - **Accessibility**: Ensure keyboard navigation and screen reader support.
+
+### MoSCoW Prioritisation 🔝
+Once all requirements were identified and confirmed with stakeholders, as listed above, each was split into one of four categories. **Must Have, Should Have, Could Have, Won't Have**. This method of prioritisation is called MoSCoW, this method has been selected as it is a simple and efficient way to make it clear which features should be prioritised during the development of the currency converter application.
+
+To correctly define each requirement, the following criteria were used for each MoSCoW catergorisation:
+- **Must Have**: Essential requirements which are non-negotiable, critical for the success of the project.
+- **Should Have**: Important requirements but not critical to the applications functionality, it could work without this feature.
+- **Could Have**: Desireable but non-essential features, these requirements would be considered "nice to haves" or "quality of life" features.
+- **Won't Have**: These are features which will not be included in this phase of the project, features included in this category may be revisited in future phases of the project but are explicity ruled out at this stage.
+
+![MoSCoW Requirements](https://github.com/user-attachments/assets/12b7bcbe-ae10-48f0-b08d-c8a7ad6bc5ae)
+
 
 ## Project Stakeholders 👩‍💼
 | Role    | Responsibility | Notes |
