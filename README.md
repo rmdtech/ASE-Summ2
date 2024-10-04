@@ -2,6 +2,8 @@
 ## Project Introduction 💰
 The purpose of this project is to develop a simple yet functional currency converter application, which can be integrated into the workflow at my workplace. The tool will allow users to convert a specified amount of money between two selected currencies, using exchange rates fetched from an external API. The project aims to provide an intuitive user interface and fast, accurate conversions.
 
+This github repository will utilise publically available APIs, however a real implementation of this tool would utilise internal APIs to utilise my workplaces existing source of exchange rate data. Currently there is not a tool for converting exchange rates using internally sourced data without calculating the exchange manually, hence the proposal of this project.
+
 ## Project Requirements 🎯
 #### 1. User Interface (UI) 🖥️
 - **Input Field for Amount**: Users should be able to input the amount they want to convert.
