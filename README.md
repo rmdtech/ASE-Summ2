@@ -81,6 +81,28 @@ To ensure a comprehensive understanding of the listed project requirements, I ha
 | Developer | Application development     | Since this is a solo development project, I will take on the role of developer   |
 | Analyst    | Client representative and sign-off    | Feedback will be sought from workplace analysts where possible    |
 
+# Project Planning 🗺️
+
+## Wireframing Potential Designs
+The first stage to planning the applications front end design was to utilise FIGMA to wireframe some potential designs which could later be narrowed down and further refined.  
+The first step of this process was to identify the key user actions which would be involved in the process. This process had already begun through the previous work defining and agreeing upon a set of requirements for the project. To further build upon this work, I created an activity diagram which breaks down the process of creating a currency into individual steps that would be taken by the user.
+
+### Activity Diagram
+![Activity Diagram drawio](https://github.com/user-attachments/assets/083addca-8b1e-4566-943e-538f1b8893bb)
+
+### Wireframing
+From the above activity diagram, I was able to build three functionaly identical, but visually different wireframe mockups. The purpose of this excerise is to experiment with very high level design concepts to determine which UI design is best suited, without having to complete a full design of each potential solution. Since a key requirement of this project is a responsive design which scales to support both desktop and mobile devices, each wireframe has been built to include a desktop as well as mobile equivalent. In addition to this, each wireframe is separated into two parts, the input phase, and the result phase. This helps to make it clear how the result of the calculation will be displayed to the user for each different design. For the purposes of wireframing, only a happypath user flow has been designed, any validation messages or error notifications will be included at the full design stage.
+
+#### Wireframe 1
+![wireframe 1](https://github.com/user-attachments/assets/fa81de2f-b6ba-4b63-9490-edb9c9eade34)
+
+#### Wireframe 2
+![wireframe 2](https://github.com/user-attachments/assets/c3367fd9-5651-4707-a2ba-8cfa999707a9)
+
+#### Wireframe 3
+![wireframe 3](https://github.com/user-attachments/assets/011b57fb-024a-49ce-a141-f5e643d74bef)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
