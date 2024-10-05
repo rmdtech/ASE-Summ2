@@ -83,7 +83,7 @@ To ensure a comprehensive understanding of the listed project requirements, I ha
 
 # Project Planning 🗺️
 
-## Wireframing Potential Designs
+## Wireframing Potential Designs ✍
 The first stage to planning the applications front end design was to utilise FIGMA to wireframe some potential designs which could later be narrowed down and further refined.  
 The first step of this process was to identify the key user actions which would be involved in the process. This process had already begun through the previous work defining and agreeing upon a set of requirements for the project. To further build upon this work, I created an activity diagram which breaks down the process of creating a currency into individual steps that would be taken by the user.
 
@@ -101,6 +101,34 @@ From the above activity diagram, I was able to build three functionaly identical
 
 #### Wireframe 3
 ![wireframe 3](https://github.com/user-attachments/assets/011b57fb-024a-49ce-a141-f5e643d74bef)
+
+## Application Design ✍
+### Colour Scheme 🎨
+One of the key requirements of this project is to ensure accessibility is incorporated throughout the design. The World Wide Web Consortium (https://www.w3.org/), publishes Web Content Accessibility Guidelines which provide guidance on using colour and contrast to make webpages more accessible.
+My workplace already utilises a colour scheme which complies with the World Wide Web Consortiums guidelines on colour and contrast and so this project will reutilise the colour codes referenced in the below image to ensure suitable contrast between elements on the web page.  
+![image](https://github.com/user-attachments/assets/8e48cfb6-1636-4118-a48c-89e0400beabf)
+Source: https://www.bankofengland.co.uk/news/2022/march/new-visual-identity
+
+### Product Design ✍
+Before building the application, it was important to design how it would look. To do this, I utilised the wireframe designs from earlier in the project and selected Wireframe 2 as the candidate design for further development. Wireframe 2 was chosen for it's effective use of space, clear flow and inclusion of accessible labelling of input forms.
+![Comparison](https://github.com/user-attachments/assets/11fe1f16-841e-4cb7-b220-3d755d179d3b)  
+
+The full design of the Currency Converter replaces generic icons and elements with colour correct designs as well as utilising the icons from Google Fonts, a free and open source repository of accessible icons.
+
+### Error Handling ⚠️
+The first iteration of the full design utilised "Toast" messages to convey information about validation of network errors, however, upon further research it became clear that toast messages were not considered an accessible method of adding additional information. This is because toast messages can often cause issues for people with attention or focus disabilities, can obstruct important elements on the screen for those using zoomed-in browsers, as well as often not working well with screen readers.  
+In response to this, I have updated the design to include error messages within the content, this improves accessibility as important error messages no longer automatically expire after a set period, and should also appear in a more relevant location within the DOM.  
+![Toast Comparison](https://github.com/user-attachments/assets/78fa520e-f17a-42a5-aba3-d1229d308953)
+
+### Final Design ✍
+Once the design elements were confirmed, I built a set of designs in Figma representing each major stage of the activity diagram previously created. This helps to give a sense of how the application will look and interact before building it. One advantage to doing this is the ability to seek feedback on designs prior to building them, this way stakeholders can comment on potential issues or concerns before too much time is spent developing a certain design.
+
+#### Desktop Design 🖥️
+![Final Design Desktop Comparison](https://github.com/user-attachments/assets/9dfebab1-b814-43ab-9abd-6cbd8c27d3b4)
+
+#### Mobile Design 📱
+![Final Design Mobile Comparison](https://github.com/user-attachments/assets/0fb80cd9-f859-4522-8428-aa179c353452)
+
 
 
 # Getting Started with Create React App
