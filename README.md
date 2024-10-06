@@ -1,4 +1,6 @@
 # Project Overview
+[![codecov](https://codecov.io/github/rmdtech/ASE-Summ2/branch/master/graph/badge.svg?token=GMW03SI6SS)](https://codecov.io/github/rmdtech/ASE-Summ2)
+![WorkflowStatus](https://github.com/rmdtech/ASE-Summ2/workflows/Node.js%20CI/badge.svg)
 ## Project Introduction 💰
 The purpose of this project is to develop a simple yet functional currency converter application, which can be integrated into the workflow at my workplace. The tool will allow users to convert a specified amount of money between two selected currencies, using exchange rates fetched from an external API. The project aims to provide an intuitive user interface and fast, accurate conversions.
 
