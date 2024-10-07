@@ -87,6 +87,17 @@ To ensure a comprehensive understanding of the listed project requirements, I ha
 | Developer | Application development     | Since this is a solo development project, I will take on the role of developer   |
 | Analyst    | Client representative and sign-off    | Feedback will be sought from workplace analysts where possible    |
 
+## Project Risks 🚨
+To ensure project risks are factored into the development process, I created a risk matrix which covers potential risks, their likelihoods, impacts, and mitigation strategies. This enabled me to be more proactive in tackling risks and avoiding serious issues within the development process.
+
+| **Risk**                                      | **Likelihood** | **Impact** | **Risk Level** (Priority) | **Mitigation Strategy**                                                |
+|-----------------------------------------------|----------------|------------|--------------------------|------------------------------------------------------------------------|
+| **API for Exchange Rates Unavailable**        | Medium         | High       | Critical                  | - Implement a fallback mechanism using a secondary API.          |
+| **Short Project Timeline causing errors/bugs**| High           | Medium     | Medium                    | - Ensure regular updates to project, seek feedback where required|
+|                                               |                |            |                          | - Use test driven development and comprehensive testing to mitigate risk of bugs                   |
+| **Project Delays Due to Feature Creep**       | Medium         | Medium     | Medium                    | - Define clear project scope and stick to the core functionality.      |
+|                                               |                |            |                          | - Use MoSCoW prioritization for additional features.                   |
+
 # Project Planning 🗺️
 
 ## Wireframing Potential Designs ✍
