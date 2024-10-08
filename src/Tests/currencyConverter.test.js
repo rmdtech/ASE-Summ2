@@ -1,4 +1,5 @@
 import * as exchangeRateRequestBuilder from '../Components/exchangeRateRequestBuilder';
+import { convertCurrency } from '../Components/currencyConverter'
 import '@testing-library/jest-dom'
 import fetch from 'jest-fetch-mock'; // Ensure jest-fetch-mock is imported
 fetch.enableMocks();
