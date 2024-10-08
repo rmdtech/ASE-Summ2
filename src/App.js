@@ -37,7 +37,7 @@ function App() {
                 )) : <option>Loading...</option>}
             </select>
             <input data-testid="amountElement"></input>
-            <button data-testid="convertButton" onClick={() => getCurrencyList()}>Convert</button>
+            <button data-testid="convertButton">Convert</button>
             <button data-testid="swapButton">Swap</button>
             <p data-testid="resultField">Result</p>
         </div>
