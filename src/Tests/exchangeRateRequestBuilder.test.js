@@ -1,4 +1,6 @@
+import { httpRequest } from '../Components/ApiRequestHandler';
 import { getCurrencyList } from '../Components/exchangeRateRequestBuilder';
+import { getExchangeRate } from '../Components/exchangeRateRequestBuilder';
 import '@testing-library/jest-dom'
 import fetch from 'jest-fetch-mock'; // Ensure jest-fetch-mock is imported
 fetch.enableMocks();
@@ -48,7 +50,7 @@ describe('getCurrencyList', () => {
     });
 
     it('should set JSON keys to uppercase before stringifying', async () => {
-        const mockData = { usd: 'United States Dollar', gbp: 'British Pound'};
+        const mockData = { usd: 'United States Dollar', gbp: 'British Pound' };
 
         // Mock the successful response
         fetch.mockResponseOnce(JSON.stringify(mockData));
@@ -62,7 +64,7 @@ describe('getCurrencyList', () => {
     });
 
     it('should handle an empty response', async () => {
-        const mockData = { };
+        const mockData = {};
 
         // Mock the successful response
         fetch.mockResponseOnce(JSON.stringify(mockData));
@@ -70,5 +72,89 @@ describe('getCurrencyList', () => {
 
         expect(result).toEqual([]); // Should return an empty array
     });
+
+});
+
+describe('getExchangeRate', () => {
+    beforeEach(() => {
+        fetch.resetMocks();
+    });
+
+    it('should return the correct exchange rate when found', async () => {
+        const mockData = {
+            usd: { eur: 0.85 }
+        };
+
+        // Mock the successful response
+        fetch.mockResponseOnce(JSON.stringify(mockData));
+
+        const exchangeRate = await getExchangeRate('USD', 'EUR');
+
+        expect(exchangeRate).toBe(0.85);
+    });
+
+    it('should return "Exchange Rate not found" if the rate is missing', async () => {
+        const mockData = {
+            usd: { gbp: 0.75 }
+        };
+
+        // Mock the successful response
+        fetch.mockResponseOnce(JSON.stringify(mockData));
+
+        const exchangeRate = await getExchangeRate('USD', 'EUR');
+
+        expect(exchangeRate).toBe("Exchange Rate not found");
+    });
+
+    it('should handle lowercase inputs and return the correct exchange rate', async () => {
+        const mockData = {
+            usd: { eur: 0.85 }
+        };
+
+        // Mock the successful response
+        fetch.mockResponseOnce(JSON.stringify(mockData));
+
+        const exchangeRate = await getExchangeRate('usd', 'eur');
+
+        expect(exchangeRate).toBe(0.85);
+    });
+
+    it('should handle uppercase inputs and return the correct exchange rate', async () => {
+        const mockData = {
+            usd: { eur: 0.85 }
+        };
+
+        // Mock the successful response
+        fetch.mockResponseOnce(JSON.stringify(mockData));
+
+        const exchangeRate = await getExchangeRate('USD', 'EUR');
+
+        expect(exchangeRate).toBe(0.85);
+    });
+
+    it('should handle an empty response and return "Exchange Rate not found"', async () => {
+        const mockData = {
+            usd: {}
+        };
+
+        // Mock the successful response
+        fetch.mockResponseOnce(JSON.stringify(mockData));
+
+        const exchangeRate = await getExchangeRate('USD', 'EUR');
+
+        expect(exchangeRate).toBe("Exchange Rate not found");
+    });
+
+    it('should handle non-existing currency data and return "Exchange Rate not found"', async () => {
+        const mockData = {};
+
+        // Mock the successful response
+        fetch.mockResponseOnce(JSON.stringify(mockData));
+
+        const exchangeRate = await getExchangeRate('USD', 'EUR');
+
+        expect(exchangeRate).toBe("Exchange Rate not found");
+    });
+
 
 });
