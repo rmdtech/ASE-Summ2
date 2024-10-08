@@ -153,4 +153,17 @@ describe('Test suite confirms existence of critical UI elements', () => {
         expect(toSelect).toContainHTML('<option>Loading...</option>');
     });
 
+    test('should return an array when resolved successfully', async () => {
+        const mockCurrencyList = ['USD', 'EUR', 'JPY'];
+
+        // Mock the function to return a resolved promise with an array
+        exchangeRateRequestBuilder.getCurrencyList.mockResolvedValueOnce(mockCurrencyList);
+
+        const result = await exchangeRateRequestBuilder.getCurrencyList();
+
+        // Check if the result is an array
+        expect(Array.isArray(result)).toBe(true);
+        expect(result).toEqual(mockCurrencyList); // Optionally, check if the returned array matches
+    });
+
 });
