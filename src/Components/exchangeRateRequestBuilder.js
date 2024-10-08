@@ -34,6 +34,9 @@ export async function getCurrencyList() {
 
 export async function getExchangeRate(fromCurrency, toCurrency) {
 
+    fromCurrency = fromCurrency.replace(/(?<=^.{3}).*/, '');
+    toCurrency = toCurrency.replace(/(?<=^.{3}).*/, '');
+
     const notFoundMessage = "Exchange Rate not found";
     const apiUrl = baseUrl + '/currencies/' + fromCurrency.toLowerCase() + '.json';
 
