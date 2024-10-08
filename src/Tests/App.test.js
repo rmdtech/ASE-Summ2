@@ -14,6 +14,11 @@ describe('Test suite confirms existence of critical UI elements', () => {
 
     beforeEach(() => {
         fetch.resetMocks(); // Reset mocks before each test
+        jest.spyOn(console, 'error').mockImplementation(() => { }); // Mock console.error to avoid actual logs during testing
+    });
+
+    afterEach(() => {
+        console.error.mockRestore(); // Restore original console.error implementation
     });
 
     beforeAll(() => {
@@ -164,6 +169,20 @@ describe('Test suite confirms existence of critical UI elements', () => {
         // Check if the result is an array
         expect(Array.isArray(result)).toBe(true);
         expect(result).toEqual(mockCurrencyList); // Optionally, check if the returned array matches
+    });
+
+    test('should log an error if getCurrencyList does not return an array', async () => {
+        const mockNonArrayResponse = 'not-an-array';
+
+        // Mock the function to return a resolved promise with a non-array value
+        exchangeRateRequestBuilder.getCurrencyList.mockResolvedValueOnce(mockNonArrayResponse);
+
+        render(<App />);
+
+        await waitFor(() => expect(exchangeRateRequestBuilder.getCurrencyList).toHaveBeenCalled());
+
+        // Ensure console.error is called with the appropriate message
+        expect(console.error).toHaveBeenCalledWith('getCurrencyList did not return an array:', mockNonArrayResponse);
     });
 
 });
