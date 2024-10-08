@@ -1,5 +1,3 @@
-import { waitFor } from '@testing-library/react';
-import { convertCurrency } from '../Components/currencyConverter';
 import * as exchangeRateRequestBuilder from '../Components/exchangeRateRequestBuilder';
 import '@testing-library/jest-dom'
 import fetch from 'jest-fetch-mock'; // Ensure jest-fetch-mock is imported
