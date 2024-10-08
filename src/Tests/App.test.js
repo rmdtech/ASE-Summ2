@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 import '@testing-library/jest-dom'
+import fetch from 'jest-fetch-mock'; // Ensure jest-fetch-mock is imported
 
 describe('Test suite confirms existence of critical UI elements', () => {
+
+    beforeEach(() => {
+        fetch.resetMocks(); // Reset mocks before each test
+    });
+
+    beforeAll(() => {
+        // Optionally set a default response if your App component makes a fetch call on load
+        fetch.mockResponseOnce(JSON.stringify({ /* mock data */ }));
+    });
+
+
     test('renders input for "From Currency"', () => {
         render(<App />);
         // Check if the element exists using getByTestId
