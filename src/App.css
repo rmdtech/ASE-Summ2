@@ -12,6 +12,7 @@ html, body {
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    background-color: #12273F;
 }
 
 /* Styling for the query and result fields */
