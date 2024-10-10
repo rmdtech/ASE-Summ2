@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/ASE-Summ2/static/css/main.f855e6bc.css",
-    "main.js": "/ASE-Summ2/static/js/main.3abd01ef.js",
+    "main.css": "/ASE-Summ2/static/css/main.c5bbbef8.css",
+    "main.js": "/ASE-Summ2/static/js/main.c1f62e0a.js",
+    "static/media/GilroyForBOE-Regular.ttf": "/ASE-Summ2/static/media/GilroyForBOE-Regular.040bd83f6941638fbbde.ttf",
     "index.html": "/ASE-Summ2/index.html",
-    "main.f855e6bc.css.map": "/ASE-Summ2/static/css/main.f855e6bc.css.map",
-    "main.3abd01ef.js.map": "/ASE-Summ2/static/js/main.3abd01ef.js.map"
+    "main.c5bbbef8.css.map": "/ASE-Summ2/static/css/main.c5bbbef8.css.map",
+    "main.c1f62e0a.js.map": "/ASE-Summ2/static/js/main.c1f62e0a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.3abd01ef.js"
+    "static/css/main.c5bbbef8.css",
+    "static/js/main.c1f62e0a.js"
   ]
 }
