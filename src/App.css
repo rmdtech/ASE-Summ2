@@ -1,38 +1,215 @@
+/* App.css */
+.material-symbols-outlined {
+    /font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+@font-face {
+    font-family: 'BoEFont'; /* Name your font family */
+    src: url('../public/GilroyForBOE-Regular.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the query and result fields */
+p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+    /* Styling for result text */
+    .QueryText {
+        color: #4b5a6c;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .ResultText {
+        color: #000000;
+        font-size: 36px;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .ErrorText {
+        color: #FE015B;
+    }
+
+/* select/dropdwon styling */
+select {
+    font-family: 'BoEFont'; /* Name your font family */
+}
+
+/* Button styling */
+button {
+    font-family: 'BoEFont'; /* Name your font family */
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #3cd7d9;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #34BCC1;
+    }
+
+    .swap-button {
+        height: 40px;
+        width: 40px;
+        padding: 0px;
+    }
+
+
+/* Base styles for the app container */
 .App {
-  text-align: center;
+    font-family: 'BoEFont', sans-serif; /* Use the font family */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to top */
+    height: 100vh;
+    padding: 20px;
+    padding-top: 100px; /* Adjust this value to match the header height */
+    box-sizing: border-box;
+    background-color: #12273F;
+}
+    .App-header {
+        background-color: #e7e9ec;
+        width: 100vw;
+        position: fixed; /* Fix the header to the top of the viewport */
+        top: 0; /* Stick the banner to the top */
+        left: 0; /* Stick the banner to the left edge */
+        padding: 20px; /* Padding for some spacing */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        z-index: 10; /* Ensure header stays on top of other elements */
+    }
+
+/* Currency Converter application area */
+.CurrencyConverter {
+    background-color: #e7e9ec;
+    padding: 15px;
+    margin: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-heading {
+    height: 20px;
+    text-align:left;
+}
+    .swap-heading {
+        height: 20px;
+        text-align: left;
+    }
+
+/* Grouping each heading and its input */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputField {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'BoEFont'; /* Name your font family */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.error-outline {
+    border: 2px solid red !important;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Styling for the result and convert button row */
+.result-convert-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Styling for the query and result section */
+.result-section {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 10px;
+}
+
+
+/* CSS Specific for mobile layout */
+@media (max-width: 600px) {
+
+    select {
+        width: 100%; /* Ensure the select dropdowns take up the full width on mobile */
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+        padding: 10px; /* Consistent padding with input */
+        margin: 10px 0; /* Consistent margin with input */
+    }
+
+    input[type="text"] {
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: flex-start; /* Left align items within the row */
+    }
+
+    .swap-heading {
+        height: 0px;
+        text-align: left;
+    }
+
+    .input-container {
+        width: 100%;
+        text-align: center;
+        align-items: flex-start; /* Left-align the contents of the input container */
+    }
+    .swap-button-container {
+        margin: 0 10px;
+    }
+
+    .result-convert-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .App {
+        padding: 10px;
+        padding-top: 120px; /* Reduce padding-top to match header height */
+    }
+
+    .App-header {
+        height: 60px; /* Smaller header for mobile */
+        padding: 20px; /* Less padding for mobile view */
+        padding-bottom: 120px;
+    }
+
+    .convert-button {
+        width: 100%;
+    }
+
+
 }
