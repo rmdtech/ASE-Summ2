@@ -241,7 +241,10 @@ describe('Test suite confirms functionality of critical UI elements', () => {
             expect(screen.getByTestId('queryField')).toHaveTextContent('');
         });
         await waitFor(() => {
-            expect(screen.getByTestId('resultField')).toHaveTextContent('Conversion failed');
+            expect(screen.getByTestId('resultField')).toHaveTextContent('');
+        });
+        await waitFor(() => {
+            expect(screen.getByTestId('errorField')).toHaveTextContent('Conversion failed');
         });
     });
 
@@ -338,7 +341,10 @@ describe('Test suite confirms functionality of critical UI elements', () => {
             expect(screen.getByTestId('queryField')).toHaveTextContent('');
         });
         await waitFor(() => {
-            expect(screen.getByTestId('resultField')).toHaveTextContent('Amount must be a valid number');
+            expect(screen.getByTestId('resultField')).toHaveTextContent('');
+        });
+        await waitFor(() => {
+            expect(screen.getByTestId('errorField')).toHaveTextContent('Amount must be a valid number');
         });
     });
 

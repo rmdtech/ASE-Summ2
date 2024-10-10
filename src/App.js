@@ -10,6 +10,7 @@ function App() {
     const [amount, setAmount] = useState(''); // Store the entered amount
     const [result, setResult] = useState(''); // Store the conversion result
     const [query, setQuery] = useState(''); // Store the conversion result
+    const [ error, setError ] = useState(''); // Store error message
 
     // Fetch currency list
     useEffect(() => {
@@ -35,8 +36,9 @@ function App() {
     const handleConvert = async () => {
         const numericAmount = parseFloat(amount); // Ensure the amount is a number
         if (isNaN(numericAmount)) {
-            setQuery(``);
-            setResult('Amount must be a valid number');
+            setQuery('');
+            setResult('');
+            setError('Amount must be a valid number');
             return;
         }
 
@@ -44,9 +46,11 @@ function App() {
         if (message === "Success") {
             setQuery(`${amount} ${fromCurrency} = `);
             setResult(`${convertedValue} ${toCurrency}`);
+            setError('');
         } else {
             setQuery(``);
-            setResult(message); // Display error message
+            setResult('');
+            setError(message); // Display error message
         }
     };
 
@@ -57,61 +61,90 @@ function App() {
         setToCurrency(temp);
     };
 
+
     return (
         <div className="App">
-            {/* From Currency Dropdown */}
-            <select
-                data-testid="currencyFromSelectElement"
-                value={fromCurrency}
-                onChange={(e) => setFromCurrency(e.target.value)}
-            >
-                {currencyList.length > 0
-                    ? currencyList.map((currency, index) => (
-                        <option key={index} value={currency}>
-                            {currency}
-                        </option>
-                    ))
-                    : <option>Loading...</option>}
-            </select>
+            <head>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            </head>
+            {/* Header Banner */}
+            <header className="App-header">
+                <h1>Summative 2 - Currency Conversion Project</h1>
+            </header>
+            <div className="CurrencyConverter">
 
-            {/* To Currency Dropdown */}
-            <select
-                data-testid="currencyToSelectElement"
-                value={toCurrency}
-                onChange={(e) => setToCurrency(e.target.value)}
-            >
-                {currencyList.length > 0
-                    ? currencyList.map((currency, index) => (
-                        <option key={index} value={currency}>
-                            {currency}
-                        </option>
-                    ))
-                    : <option>Loading...</option>}
-            </select>
+                {/* Row for Amount, From, Swap, and To inputs */}
+                <div className="row input-group">
+                    <div className="input-container">
+                        <p className='input-heading'>Amount</p>
+                        <input className={`inputField ${error ? 'error-outline' : ''}`}
+                            data-testid="amountElement"
+                            type="text"
+                            value={amount}
+                            onChange={(e) => setAmount(e.target.value)}
+                            placeholder="Enter amount"
+                        />
+                    </div>
 
-            {/* Amount Input */}
-            <input
-                data-testid="amountElement"
-                type="text"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                placeholder="Enter amount"
-            />
+                    <div className="input-container">
+                        <p className='input-heading'>From</p>
+                        <select className='inputField'
+                            data-testid="currencyFromSelectElement"
+                            value={fromCurrency}
+                            onChange={(e) => setFromCurrency(e.target.value)}
+                        >
+                            {currencyList.length > 0
+                                ? currencyList.map((currency, index) => (
+                                    <option key={index} value={currency}>
+                                        {currency}
+                                    </option>
+                                ))
+                                : <option>Loading...</option>}
+                        </select>
+                    </div>
 
-            {/* Convert Button */}
-            <button data-testid="convertButton" onClick={handleConvert}>
-                Convert
-            </button>
+                    <div className="swap-button-container">
+                        <p className='swap-heading'></p>
+                        <button data-testid="swapButton" onClick={handleSwap} className="swap-button">
+                            <span className="material-symbols-outlined">swap_horiz</span>
+                        </button>
+                    </div>
 
-            {/* Swap Button */}
-            <button data-testid="swapButton" onClick={handleSwap}>
-                Swap
-            </button>
+                    <div className="input-container">
+                        <p className='input-heading'>To</p>
+                        <select className='inputField'
+                            data-testid="currencyToSelectElement"
+                            value={toCurrency}
+                            onChange={(e) => setToCurrency(e.target.value)}
+                        >
+                            {currencyList.length > 0
+                                ? currencyList.map((currency, index) => (
+                                    <option key={index} value={currency}>
+                                        {currency}
+                                    </option>
+                                ))
+                                : <option>Loading...</option>}
+                        </select>
+                    </div>
+                </div>
+                {/* Row for error messages */}
+                <div className="row input-group">
+                    <div className="input-container">
+                        <p className='ErrorText' data-testid="errorField">{ error }</p>
+                    </div>
+                </div>
+                {/* Row for result and convert button */}
+                <div className="row result-convert-row">
+                    <div className="result-section">
+                        <p className="QueryText" data-testid="queryField">{query}</p>
+                        <p className="ResultText" data-testid="resultField">{result}</p>
+                    </div>
+                    <button className="convert-button" data-testid="convertButton" onClick={handleConvert}>
+                        Convert
+                    </button>
+                </div>
 
-            {/* Result Field */}
-            <p data-testid="queryField">{query}</p>
-            <p data-testid="resultField">{result}</p>
-
+            </div>
         </div>
     );
 }
