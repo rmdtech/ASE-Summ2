@@ -50,6 +50,13 @@ function App() {
         }
     };
 
+    // Handle swapping the selected currencies
+    const handleSwap = () => {
+        const temp = fromCurrency;
+        setFromCurrency(toCurrency);
+        setToCurrency(temp);
+    };
+
     return (
         <div className="App">
             {/* From Currency Dropdown */}
@@ -97,7 +104,7 @@ function App() {
             </button>
 
             {/* Swap Button */}
-            <button data-testid="swapButton">
+            <button data-testid="swapButton" onClick={handleSwap}>
                 Swap
             </button>
 
