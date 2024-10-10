@@ -341,6 +341,26 @@ describe('Test suite confirms functionality of critical UI elements', () => {
             expect(screen.getByTestId('resultField')).toHaveTextContent('Amount must be a valid number');
         });
     });
+
+    it('swaps the fromCurrency and toCurrency when Swap button is clicked', async () => {
+        exchangeRateRequestBuilder.getCurrencyList.mockResolvedValue(['USD', 'EUR', 'GBP']);
+
+        render(<App />);
+
+        // Wait for the currency list to load
+        await waitFor(() => expect(exchangeRateRequestBuilder.getCurrencyList).toHaveBeenCalled());
+
+        // Simulate selecting from currency and to currency
+        fireEvent.change(screen.getByTestId('currencyFromSelectElement'), { target: { value: 'USD' } });
+        fireEvent.change(screen.getByTestId('currencyToSelectElement'), { target: { value: 'EUR' } });
+
+        // Simulate clicking the Swap button
+        fireEvent.click(screen.getByTestId('swapButton'));
+
+        // Ensure the currencies are swapped
+        expect(screen.getByTestId('currencyFromSelectElement').value).toBe('EUR');
+        expect(screen.getByTestId('currencyToSelectElement').value).toBe('USD');
+    });
     
 
 });
