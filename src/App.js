@@ -76,8 +76,9 @@ function App() {
                 {/* Row for Amount, From, Swap, and To inputs */}
                 <div className="row input-group">
                     <div className="input-container">
-                        <p className='input-heading'>Amount</p>
+                        <p id='lbl-amount'className='input-heading'>Amount</p>
                         <input className={`inputField ${error ? 'error-outline' : ''}`}
+                            aria-labelledby="lbl-amount"
                             data-testid="amountElement"
                             type="text"
                             value={amount}
@@ -87,8 +88,9 @@ function App() {
                     </div>
 
                     <div className="input-container">
-                        <p className='input-heading'>From</p>
+                        <p id='lbl-currencyFrom' className='input-heading'>From</p>
                         <select className='inputField'
+                            aria-labelledby="lbl-currencyFrom"
                             data-testid="currencyFromSelectElement"
                             value={fromCurrency}
                             onChange={(e) => setFromCurrency(e.target.value)}
@@ -111,8 +113,9 @@ function App() {
                     </div>
 
                     <div className="input-container">
-                        <p className='input-heading'>To</p>
+                        <p id='lbl-currencyTo' className='input-heading'>To</p>
                         <select className='inputField'
+                            aria-labelledby="lbl-currencyTo"
                             data-testid="currencyToSelectElement"
                             value={toCurrency}
                             onChange={(e) => setToCurrency(e.target.value)}
