@@ -98,6 +98,52 @@ To ensure project risks are factored into the development process, I created a r
 | **Project Delays Due to Feature Creep**       | Medium         | Medium     | Medium                    | - Define clear project scope and stick to the core functionality.      |
 |                                               |                |            |                          | - Use MoSCoW prioritization for additional features.                   |
 
+# Project Management 👩‍💼
+## Project Management Tool 🔧
+To organise tasks, I utilised Jira Projects to create a KanBan board with five important sections.
+- Backlog (Tasks which have been written but may need additional refinment, or blockers cleared, before they are ready to be started)
+- Ready (Tasks which are refined, unblocked and ready to begin development)
+- In-Progress (Tasks which have been started but not yet finished)
+- Review (Tasks which have been finished but need to be checked over before merging into master)
+- Done (Tasks which are complete and merged into master branch)
+
+![kanban](https://github.com/user-attachments/assets/595855b3-8947-4bc7-8726-7b0808fd360f)  
+
+
+Due to this projects fast pace and short duration, it was critical to be capable of quickly identifying tasks and their statuses; utilising a kanban board has helped me to better track which tickets were at different stages of delivery and also ensured I never took on too many tickets at once by capping in-progress tickets at a maximum of three. In addition to this, the very tight timeline of this project meant that making the most efficient use of my time was critical. By utilising Jira projects (specifically the sizing feature of tickets) has helped to show at a glance where I need to focus my energy and roughly how much effort each remaining ticket will take.
+
+
+## Project Organisation 📁
+### Labels 🏷️
+To help organise and manage this project, I utilised github labels which can be applied to any issue/ticket. I had not previously used this system, but decided to make use of custom labels for the purpose of prioritisation, sizing and organising by type. Whilst there were benefits to this approach, there were also some challenges which emerged.  
+One of the key advantages to utilising labels was the inherent flexibility, allowing me to create custom labels to fit the project's needs. These custom labels were used to quickly categorise and filter issues based on specific criteria, and therefore made it easier to organise the backlog and decide which tickets were best suited to be picked up next. The screenshot below shows the full list of labels I created with the aim of being able to gather key information on any particular issue at a glance.  
+
+![labels](https://github.com/user-attachments/assets/8ee9c021-1828-45e6-8c45-c0dc61b2dc71)  
+
+Whilst this project has been a single developer operation, should a second developer join the project, the labelling system would make it quick and easy for them to understand ticket priority, effort as well as type, without having to open each ticket individually and read through all the details. However, whilst Jira labels are useful for this purpose, Jira Projects utilise a different system for tagging and labelling tickets, this therefore means that the same work tagging each ticket with a label needs to be completed twice, once in the project and once on the issue directly. As a result, the secondary step of retagging issues within the project was often forgotten about, missed or disregarded altogether.  
+
+Upon reflection, the use of GitHub labels in this project has brought significant benefits for efficiency and organisation. Simplifying ticket selection and management through the ability to create custom labels for the project's unique needs. However, the requirement to double tag on both the issue directly and within GitHub Projects limited the efficiency and usability of the sytsem, in future projects it would be beneficial to explore an alternative method that perhaps utilises labels differently to avoid the issue of double tagging.
+
+### Sizing 👕
+Using custom created labels within Jira, I gave each ticket/issue its own size based on an estimate of the effort required to complete the work, quantity of unknowns involved, as well as the estimated length of time involved to complete the ticket. I decided to utilise fibonacci sequence sizes for my tickets, as this is a simple and repeatable way of assigning effort to tickets which focusses on effort/complexity rather than time. In addition to this, I believe that the increasing gaps between sizes reflects the growing complexities and unknowns as you move up the scale better than that provided by t-shirt sizes which simply utilise XS, S, M, L etc.
+
+To ensure sizing was as effective as possible, it was important to make sure tasks were sized consistently, to do this, I used the below guide to accurately size each ticket based on the existing system as well as my current knowledge, skills and understanding.
+- 0 - Very simple tasks which are very well understood, and require little to no effort.
+- 1 - Small tasks which are simple, have no unknowns, but will take a short while to implement.
+- 3 - Moderate complexity. May involve some uncertanties but are generally straightforward.
+- 5 - Larger or more complex tasks, these will involve multiple steps or uncertainties.
+- 8 - High complexity with significant uncertainty, this may involve architectural changes. Consider breaking this down into smaller tickets.
+- 13 - This ticket is too large and should be broken  down into smaller tasks. 
+
+### Ticket Templates 🎟️
+One of the first stages of the project was setting up ticket templates, these templates ensured tickets were created with consistent format and information by prefilling specific questions/headings each time a new ticket was created. To make sure these templates were as relevant as possible, I create three separate templates for each type of issue, "feature", "bug" and "admin":  
+![templates](https://github.com/user-attachments/assets/31f2bdad-79fc-46d9-9de3-30e6dc5c77b3)  
+
+The below screenshot shows an example of the blank "feature" template, prior to filling in the details. The template includes four primary sections, Description, Objectives, Dependencies, and Notes, these pre-defined fields reduce the time needed to create detailed tickets, streamlining the process and minimising missed information by prompting the author to think about each heading and what information would be most suitable.
+
+![feature template](https://github.com/user-attachments/assets/12df1b52-3e3e-40c0-b783-1c9d1f6921d3)
+
+
 # Project Planning 🗺️
 
 ## Wireframing Potential Designs ✍
@@ -146,6 +192,7 @@ Once the design elements were confirmed, I built a set of designs in Figma repre
 #### Mobile Design 📱
 ![Final Design Mobile Comparison](https://github.com/user-attachments/assets/0fb80cd9-f859-4522-8428-aa179c353452)
 
+# Project Development 🧑‍💻
 
 
 # Getting Started with Create React App
