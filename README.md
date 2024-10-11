@@ -235,3 +235,26 @@ A significant volume of the created unit tests covered the core business functio
 ![test example](https://github.com/user-attachments/assets/5e618455-bc51-47e9-b76c-78356cb38e5c)  
 
 In this test, a mock of the exchange rate fetching mechanism is run, the reason for this is that we do not want to actually test the exchange rate fetching mechanism in this specific unit test. The rest of the values are given as basic, expected values, this test confirms that the primary use case is functional, whilst other more specific tests are used for testing edge cases and errors.
+
+
+
+# Usability & Accessibility ✅
+In addition to the functional requirements tackled by this project, there were non-functional requirements which needed to be met. These included:
+- **Responsive Design**: The application should be usable on both desktop and mobile devices.
+- **Performance**: The conversion process should be quick, ideally under 1 second.
+- **Accessibility**: Ensure keyboard navigation and screen reader support.
+
+To help determine the performance and accessibility of my project, I utilised Google Lighthouse, an open-source tool for webpage auditing. Lighthouse provides a score in four areas, **Performance, Accessibility, Best Practices, & SEO**, since this prototype would be utilised as an internal tool, we will disregard SEO (Search Engine Optimisation).  
+
+![lighthouse final score](https://github.com/user-attachments/assets/127c6aa1-d713-46bf-b69f-b850271eb3be)
+
+## Performance 🏎️
+
+## Accessibility 🔎
+Accessibility was a key requirement mentioned within the requirements document, this included supporting the use of screen-readers and other accessibility tools. The original MVP of this project had a lower accessibility score than the score of **94** shown above. Originally the project scored just **83**, Lighthouse listed a lack of labelled inputs as the primary cause for this lower score.
+![low score](https://github.com/user-attachments/assets/3c5745e6-9d80-468c-bcd1-c057b1337b6c)  
+To resolve this issue I researched webpage labelling and discovered you have to specifically map labels to the relevant input fields. I added IDs to the labels using `id='lbl-currencyFrom'` and then provided similar mappings in the definition of each select element `aria-labelledby="lbl-currencyFrom"`. This change increased the accessibility score by 11, bringing the new total to 94%.  
+In addition to this, the application passed 15 other Lighthouse accessibility audits, including accessible naming, scaling, touch screen support, and correctly ordered elements for screen readers.  
+
+Finally, as shown below Lighthouse failed the application on contrast ratio in relation to action buttons.
+![contrast](https://github.com/user-attachments/assets/f9b29086-3872-4d04-8fa9-da386db41d39)
