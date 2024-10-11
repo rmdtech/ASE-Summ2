@@ -245,16 +245,26 @@ In addition to the functional requirements tackled by this project, there were n
 - **Accessibility**: Ensure keyboard navigation and screen reader support.
 
 To help determine the performance and accessibility of my project, I utilised Google Lighthouse, an open-source tool for webpage auditing. Lighthouse provides a score in four areas, **Performance, Accessibility, Best Practices, & SEO**, since this prototype would be utilised as an internal tool, we will disregard SEO (Search Engine Optimisation).  
+![perfect score](https://github.com/user-attachments/assets/03d28d8a-c015-4c52-8278-8d9365313779)
 
-![lighthouse final score](https://github.com/user-attachments/assets/127c6aa1-d713-46bf-b69f-b850271eb3be)
 
 ## Performance 🏎️
+A key requirement for the application was good performance, measured by a response time under 1 second. Google Lighthouse provides a perfect 100/100 score for performance of this application. In addition to this, I measured the API response time to ensure that messages were of sufficient speed.  
+![image](https://github.com/user-attachments/assets/7c96fe80-fb99-4271-8c3e-afc969994552)  
+The above screenshot shows timings of a standard API call initiated by the user via the user interface. The measured response time is 1.36ms, and the perceived response time was consistently measured at under 1 second response time.
 
 ## Accessibility 🔎
 Accessibility was a key requirement mentioned within the requirements document, this included supporting the use of screen-readers and other accessibility tools. The original MVP of this project had a lower accessibility score than the score of **94** shown above. Originally the project scored just **83**, Lighthouse listed a lack of labelled inputs as the primary cause for this lower score.
 ![low score](https://github.com/user-attachments/assets/3c5745e6-9d80-468c-bcd1-c057b1337b6c)  
 To resolve this issue I researched webpage labelling and discovered you have to specifically map labels to the relevant input fields. I added IDs to the labels using `id='lbl-currencyFrom'` and then provided similar mappings in the definition of each select element `aria-labelledby="lbl-currencyFrom"`. This change increased the accessibility score by 11, bringing the new total to 94%.  
+ ![lighthouse final score](https://github.com/user-attachments/assets/4a72a5c4-a7bd-49f5-8359-ceaef6561a7d)  
+
+
+
 In addition to this, the application passed 15 other Lighthouse accessibility audits, including accessible naming, scaling, touch screen support, and correctly ordered elements for screen readers.  
 
 Finally, as shown below Lighthouse failed the application on contrast ratio in relation to action buttons.
-![contrast](https://github.com/user-attachments/assets/f9b29086-3872-4d04-8fa9-da386db41d39)
+![contrast](https://github.com/user-attachments/assets/f9b29086-3872-4d04-8fa9-da386db41d39)  
+
+Upon further research, it is clear that the wrong colour was utilised in the original designs and the organisations colour scheme intends for a dark blue colour to be used as text on light blue buttons, rather than white as the text colour. This was soon rectified and the accessibility score further improved to be 100/100 in all categories.  
+![perfect score](https://github.com/user-attachments/assets/4ae19641-f671-428f-9445-7b4bd6a63521)
