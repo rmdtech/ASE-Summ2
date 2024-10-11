@@ -33,7 +33,6 @@ This github repository will utilise publically available APIs, however a real im
 
 #### 4. Validation ✅
 - **Input Validation**: Ensure the user enters valid numbers in the amount field.
-- **Currency Selection Validation**: Ensure different source and target currencies are selected.
 
 #### 5. Error Handling ⛔
 - **Network Errors**: Display appropriate error messages if there's an issue fetching exchange rates.
