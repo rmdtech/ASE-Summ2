@@ -8,7 +8,7 @@ Production Environment: https://rmdtech.github.io/ASE-Summ2/
 ## Project Introduction 💰
 The purpose of this project is to develop a simple yet functional currency converter application, which can be integrated into the workflow at my workplace. The tool will allow users to convert a specified amount of money between two selected currencies, using exchange rates fetched from an external API. The project aims to provide an intuitive user interface and fast, accurate conversions.
 
-This github repository will utilise publically available APIs, however a real implementation of this tool would utilise internal APIs to utilise my workplaces existing source of exchange rate data. Currently there is not a tool for converting exchange rates using internally sourced data without calculating the exchange manually, hence the proposal of this project.
+This github repository will utilise publicly available APIs, however a real implementation of this tool would utilise internal APIs to utilise my workplaces existing source of exchange rate data. Currently there is not a tool for converting exchange rates using internally sourced data without calculating the exchange manually, hence the proposal of this project.
 
 ### Project Roadmap
 ![timeline drawio](https://github.com/user-attachments/assets/3a9a846f-7735-45ae-99cd-0b4d6030d0bd)
@@ -46,11 +46,11 @@ This github repository will utilise publically available APIs, however a real im
 ### MoSCoW Prioritisation 🔝
 Once all requirements were identified and confirmed with stakeholders, as listed above, each was split into one of four categories. **Must Have, Should Have, Could Have, Won't Have**. This method of prioritisation is called MoSCoW, this method has been selected as it is a simple and efficient way to make it clear which features should be prioritised during the development of the currency converter application.
 
-To correctly define each requirement, the following criteria were used for each MoSCoW catergorisation:
+To correctly define each requirement, the following criteria were used for each MoSCoW categorisation:
 - **Must Have**: Essential requirements which are non-negotiable, critical for the success of the project.
 - **Should Have**: Important requirements but not critical to the applications functionality, it could work without this feature.
-- **Could Have**: Desireable but non-essential features, these requirements would be considered "nice to haves" or "quality of life" features.
-- **Won't Have**: These are features which will not be included in this phase of the project, features included in this category may be revisited in future phases of the project but are explicity ruled out at this stage.
+- **Could Have**: Desirable but non-essential features, these requirements would be considered "nice to haves" or "quality of life" features.
+- **Won't Have**: These are features which will not be included in this phase of the project, features included in this category may be revisited in future phases of the project but are explicitly ruled out at this stage.
 
 ![MoSCoW Requirements](https://github.com/user-attachments/assets/12b7bcbe-ae10-48f0-b08d-c8a7ad6bc5ae)
 
@@ -99,12 +99,12 @@ To ensure project risks are factored into the development process, I created a r
 | **Short Project Timeline causing errors/bugs**| High           | Medium     | Medium                    | - Ensure regular updates to project, seek feedback where required|
 |                                               |                |            |                          | - Use test driven development and comprehensive testing to mitigate risk of bugs                   |
 | **Project Delays Due to Feature Creep**       | Medium         | Medium     | Medium                    | - Define clear project scope and stick to the core functionality.      |
-|                                               |                |            |                          | - Use MoSCoW prioritization for additional features.                   |
+|                                               |                |            |                          | - Use MoSCoW prioritisation for additional features.                   |
 
 # Project Management 👩‍💼
 ## Project Management Tool 🔧
 To organise tasks, I utilised GitHub Projects to create a KanBan board with five important sections.
-- Backlog (Tasks which have been written but may need additional refinment, or blockers cleared, before they are ready to be started)
+- Backlog (Tasks which have been written but may need additional refinement, or blockers cleared, before they are ready to be started)
 - Ready (Tasks which are refined, unblocked and ready to begin development)
 - In-Progress (Tasks which have been started but not yet finished)
 - Review (Tasks which have been finished but need to be checked over before merging into master)
@@ -125,7 +125,7 @@ One of the key advantages to utilising labels was the inherent flexibility, allo
 
 Whilst this project has been a single developer operation, should a second developer join the project, the labelling system would make it quick and easy for them to understand ticket priority, effort as well as type, without having to open each ticket individually and read through all the details. However, whilst GitHub labels are useful for this purpose, GitHub Projects utilise a different system for tagging and labelling tickets, this therefore means that the same work tagging each ticket with a label needs to be completed twice, once in the project and once on the issue directly. As a result, the secondary step of retagging issues within the project was often forgotten about, missed or disregarded altogether.  
 
-Upon reflection, the use of GitHub labels in this project has brought significant benefits for efficiency and organisation. Simplifying ticket selection and management through the ability to create custom labels for the project's unique needs. However, the requirement to double tag on both the issue directly and within GitHub Projects limited the efficiency and usability of the sytsem, in future projects it would be beneficial to explore an alternative method that perhaps utilises labels differently to avoid the issue of double tagging.
+Upon reflection, the use of GitHub labels in this project has brought significant benefits for efficiency and organisation. Simplifying ticket selection and management through the ability to create custom labels for the project's unique needs. However, the requirement to double tag on both the issue directly and within GitHub Projects limited the efficiency and usability of the system, in future projects it would be beneficial to explore an alternative method that perhaps utilises labels differently to avoid the issue of double tagging.
 
 ### Sizing 👕
 Using custom created labels within GitHub, I gave each ticket/issue its own size based on an estimate of the effort required to complete the work, quantity of unknowns involved, as well as the estimated length of time involved to complete the ticket. I decided to utilise fibonacci sequence sizes for my tickets, as this is a simple and repeatable way of assigning effort to tickets which focusses on effort/complexity rather than time. In addition to this, I believe that the increasing gaps between sizes reflects the growing complexities and unknowns as you move up the scale better than that provided by t-shirt sizes which simply utilise XS, S, M, L etc.
@@ -133,7 +133,7 @@ Using custom created labels within GitHub, I gave each ticket/issue its own size
 To ensure sizing was as effective as possible, it was important to make sure tasks were sized consistently, to do this, I used the below guide to accurately size each ticket based on the existing system as well as my current knowledge, skills and understanding.
 - 0 - Very simple tasks which are very well understood, and require little to no effort.
 - 1 - Small tasks which are simple, have no unknowns, but will take a short while to implement.
-- 3 - Moderate complexity. May involve some uncertanties but are generally straightforward.
+- 3 - Moderate complexity. May involve some uncertainties but are generally straightforward.
 - 5 - Larger or more complex tasks, these will involve multiple steps or uncertainties.
 - 8 - High complexity with significant uncertainty, this may involve architectural changes. Consider breaking this down into smaller tickets.
 - 13 - This ticket is too large and should be broken  down into smaller tasks. 
@@ -142,7 +142,7 @@ To ensure sizing was as effective as possible, it was important to make sure tas
 One of the first stages of the project was setting up ticket templates, these templates ensured tickets were created with consistent format and information by prefilling specific questions/headings each time a new ticket was created. To make sure these templates were as relevant as possible, I create three separate templates for each type of issue, "feature", "bug" and "admin":  
 ![templates](https://github.com/user-attachments/assets/31f2bdad-79fc-46d9-9de3-30e6dc5c77b3)  
 
-The below screenshot shows an example of the blank "feature" template, prior to filling in the details. The template includes four primary sections, Description, Objectives, Dependencies, and Notes, these pre-defined fields reduce the time needed to create detailed tickets, streamlining the process and minimising missed information by prompting the author to think about each heading and what information would be most suitable.
+The below screenshot shows an example of the blank "feature" template, prior to filling in the details. The template includes four primary sections, Description, Objectives, Dependencies, and Notes; these predefined fields reduce the time needed to create detailed tickets, streamlining the process and minimising missed information by prompting the author to think about each heading and what information would be most suitable.
 
 ![feature template](https://github.com/user-attachments/assets/12df1b52-3e3e-40c0-b783-1c9d1f6921d3)
 
@@ -157,7 +157,7 @@ The first step of this process was to identify the key user actions which would 
 ![Activity Diagram drawio](https://github.com/user-attachments/assets/083addca-8b1e-4566-943e-538f1b8893bb)
 
 ### Wireframing
-From the above activity diagram, I was able to build three functionaly identical, but visually different wireframe mockups. The purpose of this excerise is to experiment with very high level design concepts to determine which UI design is best suited, without having to complete a full design of each potential solution. Since a key requirement of this project is a responsive design which scales to support both desktop and mobile devices, each wireframe has been built to include a desktop as well as mobile equivalent. In addition to this, each wireframe is separated into two parts, the input phase, and the result phase. This helps to make it clear how the result of the calculation will be displayed to the user for each different design. For the purposes of wireframing, only a happypath user flow has been designed, any validation messages or error notifications will be included at the full design stage.
+From the above activity diagram, I was able to build three functionally identical, but visually different wireframe mockups. The purpose of this exercise is to experiment with very high level design concepts to determine which UI design is best suited, without having to complete a full design of each potential solution. Since a key requirement of this project is a responsive design which scales to support both desktop and mobile devices, each wireframe has been built to include a desktop as well as mobile equivalent. In addition to this, each wireframe is separated into two parts, the input phase, and the result phase. This helps to make it clear how the result of the calculation will be displayed to the user for each different design. For the purposes of wireframing, only a happy path user flow has been designed, any validation messages or error notifications will be included at the full design stage.
 
 #### Wireframe 1
 ![wireframe 1](https://github.com/user-attachments/assets/fa81de2f-b6ba-4b63-9490-edb9c9eade34)
@@ -208,7 +208,7 @@ The below diagram is a high-level representation of the project development time
 3. **UI Testing -** For UI testing, I first identified each of the essential UI components which would be required to meet the requirements confirmed during the project planning phase, as well as the UI design confirmed earlier in the project.
 4. **Adding UI Elements -** Each of the previously identified essential UI components were then added to the project, however these had no styling or functionality applied to them at this stage. This addition enabled the previous tests to begin successfully validating.
 5. **API Testing -** Based on the previously defined project requirements, unit tests were written to cover the expected functionality of the API, including error handling.
-6. **API Functionality -** At this stage, API functionality was added to the project, this enabled the requested of data from the API, as well as the handling of API responses, however it does not include the application of this data within business logic.
+6. **API Functionality -** At this stage, API functionality was added to the project, this enabled the requesting of data from the API, as well as the handling of API responses, however it does not include the application of this data within business logic.
 7. **Business Logic Testing -** Fully covering business logic was an important stage of the development process as this is the core of the application, therefore it was important to correctly identify all test cases. At this stage, I worked through the expected flow of data through the currency conversion process, and ensured tests were written for each stage, this ensures that the test suite will detect any subtle issues with the conversion process potentially introduced in future updates.
 8. **Business Logic Implementation -** This stage involved implementing business logic, most notably, the ability to convert currencies, whilst this was not yet integrated with the user interface, I was able to utilise the previously written tests to confirm functionality.
 9. **UI Integration -** Existing UI elements could now be connected to the business logic and API to enable functionality of the application.
@@ -265,7 +265,7 @@ In addition to this, the application passed 15 other Lighthouse accessibility au
 Finally, as shown below Lighthouse failed the application on contrast ratio in relation to action buttons.
 ![contrast](https://github.com/user-attachments/assets/f9b29086-3872-4d04-8fa9-da386db41d39)  
 
-Upon further research, it is clear that the wrong colour was utilised in the original designs and the organisations colour scheme intends for a dark blue colour to be used as text on light blue buttons, rather than white as the text colour. This was soon rectified and the accessibility score further improved to be 100/100 in all categories.  
+Upon further research, it is clear that the wrong colour was utilised in the original designs and the organisation's colour scheme intends for a dark blue colour to be used as text on light blue buttons, rather than white as the text colour. This was soon rectified and the accessibility score further improved to be 100/100 in all categories.  
 ![perfect score](https://github.com/user-attachments/assets/4ae19641-f671-428f-9445-7b4bd6a63521)
 
 
@@ -330,4 +330,4 @@ Screenshots of the final product are available below, as well as a link to the h
   - Implemented a font utilised by my employer for it's professional design and ease of readability for those with impairments.
 
 ## Future Scope
-With additional time and resources on this project there are some additional features I would like to implement based on feedback from colleagues, noteably the inclusion of a conversion history so that I can see a list of all the conversions completed within my session. In addition to this, if the project were scaled up, I would like to include additional test environments so that a tester could validate changes without having to merge changes into the live environment or download changes locally.
+With additional time and resources on this project there are some additional features I would like to implement based on feedback from colleagues, notably the inclusion of a conversion history so that I can see a list of all the conversions completed within my session. In addition to this, if the project were scaled up, I would like to include additional test environments so that a tester could validate changes without having to merge changes into the live environment or download changes locally.
