@@ -267,3 +267,67 @@ Finally, as shown below Lighthouse failed the application on contrast ratio in r
 
 Upon further research, it is clear that the wrong colour was utilised in the original designs and the organisations colour scheme intends for a dark blue colour to be used as text on light blue buttons, rather than white as the text colour. This was soon rectified and the accessibility score further improved to be 100/100 in all categories.  
 ![perfect score](https://github.com/user-attachments/assets/4ae19641-f671-428f-9445-7b4bd6a63521)
+
+
+# Project Analysis & Reflection 🔬
+The initial project proposal laid out several key functional and non-functional requirements, measured against these requirements, I consider this project to be a success.
+
+## Final Product
+Screenshots of the final product are available below, as well as a link to the hosted application which can be found at: https://rmdtech.github.io/ASE-Summ2/  
+### Desktop View 🖥️
+![desktop view](https://github.com/user-attachments/assets/e982c4f2-6441-46a9-ac88-6a9fafba0118)
+
+### Mobile View 📱
+![Mobile View](https://github.com/user-attachments/assets/c1d25119-8456-4ca7-bb63-826060996015)
+
+## Requirements Reflection
+
+#### 1. User Interface (UI) 🖥️
+- [x] **Input Field for Amount**: Users should be able to input the amount they want to convert.
+  - Implemented using an input field with validation for numerical values.
+- [x]  **Selection method for Currencies**: A method is required for selecting the source currency and another for the target currency.
+  - Implemented two dropdowns for source and target currency selection.
+  - API data-driven options for supported currencies.
+- [x]  **Convert Button**: A button to trigger the conversion process.
+  - Added a button with the label "Convert" and an onclick handler for the conversion logic.
+- [x]  **Result Display**: A field or label to show the converted amount.
+  - Added two tier result field which displays the original query in small text and the resulting value in larger text.
+- [x]  **Swap Currencies**: As requested by stakeholders as part of feedback on existing requirements, a "swap currencies" functionality was requested, to swap To/From currency selection for conversion.
+  - Added a swap button and an onclick handler for the swapping logic.
+  
+#### 2. Currency Data 💵
+- [x]  **Currency List**: At a minimum, include major currencies such as USD, EUR, GBP, JPY, etc.
+  - This requirement was met and exceeded, with every major currency included via API requests
+- [x]  **Live Exchange Rates**: Fetch live exchange rates from an API
+  - API requests were implemented to retrieve a list of the currencies available via the API
+
+#### 3. Backend Logic ⚙️
+- [x]  **Conversion Formula**: Implement a basic conversion formula:  
+  `Converted Amount = Amount * Exchange Rate`
+  - Formula applied in the backend, and calculations validated with test cases.
+- [x]  **Fetch Exchange Rates**: Integrate API calls to retrieve current exchange rates.
+  - API requests were implemented to ensure up to date rates were available for the application
+
+#### 4. Validation ✅
+- [x]  **Input Validation**: Ensure the user enters valid numbers in the amount field.
+  - Added validation to restrict input to numerical values and prevent empty submissions.
+  - Error message displayed for invalid inputs.
+
+#### 5. Error Handling ⛔
+- [x]  **Network Errors**: Display appropriate error messages if there's an issue fetching exchange rates.
+  - API successfully returns error messages in the event of a network issue.
+- [x]  **Input Errors**: Display user-friendly error messages for invalid inputs or selections.
+  - User prompted with "Amount must be a valid number" if input is incorrect.
+
+#### 6. Non-functional Requirements ⏩
+- [x]  **Responsive Design**: The application should be usable on both desktop and mobile devices.
+  - Implemented using CSS media queries. Tested on various screen sizes.
+- [x]  **Performance**: The conversion process should be quick, ideally under 1 second.
+  - Conversion and API response times have been consistently measured at an under one second response time.
+- [x]  **Accessibility**: Ensure keyboard navigation and screen reader support.
+  - Included use of ARIA labels for screen readers.
+  - Utilised award winning design language utilised by my workplace
+  - Implemented a font utilised by my employer for it's professional design and ease of readability for those with impairments.
+
+## Future Scope
+With additional time and resources on this project there are some additional features I would like to implement based on feedback from colleagues, noteably the inclusion of a conversion history so that I can see a list of all the conversions completed within my session. In addition to this, if the project were scaled up, I would like to include additional test environments so that a tester could validate changes without having to merge changes into the live environment or download changes locally.
