@@ -115,6 +115,8 @@ To organise tasks, I utilised GitHub Projects to create a KanBan board with five
 
 Due to this projects fast pace and short duration, it was critical to be capable of quickly identifying tasks and their statuses; utilising a kanban board has helped me to better track which tickets were at different stages of delivery and also ensured I never took on too many tickets at once by capping in-progress tickets at a maximum of three. In addition to this, the very tight timeline of this project meant that making the most efficient use of my time was critical. By utilising GitHub projects (specifically the sizing feature of tickets) has helped to show at a glance where I need to focus my energy and roughly how much effort each remaining ticket will take.
 
+## Project Management Constraints 🪢
+As previously mentioned, the limited time constraints imposed on this project have been a driving factor in several key decisions, this has continued into the organisation of the project in which I have elected to not utilise sprints. The utilisation of sprints and the ceremonies involved (e.g. sprint planning) would be counterproductive to the efficiency of the project. As a solo developer on this project, I considered these formalities to be unnecessary overhead, as there is no wider development or testing team to align with or delegate tasks to. These decisions are ultimately what led me towards utilising Kanban, focussing on minimising work in progress tasks to remain agile to any potential unexpected changes that required addressing.
 
 ## Project Organisation 📁
 ### Labels 🏷️
@@ -271,16 +273,7 @@ Upon further research, it is clear that the wrong colour was utilised in the ori
 
 # Project Analysis & Reflection 🔬
 The initial project proposal laid out several key functional and non-functional requirements, measured against these requirements, I consider this project to be a success.
-
-## Final Product
-Screenshots of the final product are available below, as well as a link to the hosted application which can be found at: https://rmdtech.github.io/ASE-Summ2/  
-### Desktop View 🖥️
-![desktop view](https://github.com/user-attachments/assets/e982c4f2-6441-46a9-ac88-6a9fafba0118)
-
-### Mobile View 📱
-![Mobile View](https://github.com/user-attachments/assets/c1d25119-8456-4ca7-bb63-826060996015)
-
-## Requirements Reflection
+## Requirements Reflection 🪞
 
 #### 1. User Interface (UI) 🖥️
 - [x] **Input Field for Amount**: Users should be able to input the amount they want to convert.
@@ -328,6 +321,14 @@ Screenshots of the final product are available below, as well as a link to the h
   - Included use of ARIA labels for screen readers.
   - Utilised award winning design language utilised by my workplace
   - Implemented a font utilised by my employer for it's professional design and ease of readability for those with impairments.
+     
+## Final Product Visuals 📺
+Screenshots of the final product are available below, as well as a link to the hosted application which can be found at: https://rmdtech.github.io/ASE-Summ2/  
+### Desktop View 🖥️
+![desktop view](https://github.com/user-attachments/assets/e982c4f2-6441-46a9-ac88-6a9fafba0118)
 
-## Future Scope
+### Mobile View 📱
+![Mobile View](https://github.com/user-attachments/assets/c1d25119-8456-4ca7-bb63-826060996015)
+
+## Future Scope 🔮
 With additional time and resources on this project there are some additional features I would like to implement based on feedback from colleagues, notably the inclusion of a conversion history so that I can see a list of all the conversions completed within my session. In addition to this, if the project were scaled up, I would like to include additional test environments so that a tester could validate changes without having to merge changes into the live environment or download changes locally.
