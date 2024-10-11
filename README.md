@@ -10,6 +10,10 @@ The purpose of this project is to develop a simple yet functional currency conve
 
 This github repository will utilise publically available APIs, however a real implementation of this tool would utilise internal APIs to utilise my workplaces existing source of exchange rate data. Currently there is not a tool for converting exchange rates using internally sourced data without calculating the exchange manually, hence the proposal of this project.
 
+### Project Roadmap
+![timeline drawio](https://github.com/user-attachments/assets/3a9a846f-7735-45ae-99cd-0b4d6030d0bd)
+
+
 ## Project Requirements 🎯
 #### 1. User Interface (UI) 🖥️
 - **Input Field for Amount**: Users should be able to input the amount they want to convert.
@@ -100,7 +104,7 @@ To ensure project risks are factored into the development process, I created a r
 
 # Project Management 👩‍💼
 ## Project Management Tool 🔧
-To organise tasks, I utilised Jira Projects to create a KanBan board with five important sections.
+To organise tasks, I utilised GitHub Projects to create a KanBan board with five important sections.
 - Backlog (Tasks which have been written but may need additional refinment, or blockers cleared, before they are ready to be started)
 - Ready (Tasks which are refined, unblocked and ready to begin development)
 - In-Progress (Tasks which have been started but not yet finished)
@@ -110,7 +114,7 @@ To organise tasks, I utilised Jira Projects to create a KanBan board with five i
 ![kanban](https://github.com/user-attachments/assets/595855b3-8947-4bc7-8726-7b0808fd360f)  
 
 
-Due to this projects fast pace and short duration, it was critical to be capable of quickly identifying tasks and their statuses; utilising a kanban board has helped me to better track which tickets were at different stages of delivery and also ensured I never took on too many tickets at once by capping in-progress tickets at a maximum of three. In addition to this, the very tight timeline of this project meant that making the most efficient use of my time was critical. By utilising Jira projects (specifically the sizing feature of tickets) has helped to show at a glance where I need to focus my energy and roughly how much effort each remaining ticket will take.
+Due to this projects fast pace and short duration, it was critical to be capable of quickly identifying tasks and their statuses; utilising a kanban board has helped me to better track which tickets were at different stages of delivery and also ensured I never took on too many tickets at once by capping in-progress tickets at a maximum of three. In addition to this, the very tight timeline of this project meant that making the most efficient use of my time was critical. By utilising GitHub projects (specifically the sizing feature of tickets) has helped to show at a glance where I need to focus my energy and roughly how much effort each remaining ticket will take.
 
 
 ## Project Organisation 📁
@@ -120,12 +124,12 @@ One of the key advantages to utilising labels was the inherent flexibility, allo
 
 ![labels](https://github.com/user-attachments/assets/8ee9c021-1828-45e6-8c45-c0dc61b2dc71)  
 
-Whilst this project has been a single developer operation, should a second developer join the project, the labelling system would make it quick and easy for them to understand ticket priority, effort as well as type, without having to open each ticket individually and read through all the details. However, whilst Jira labels are useful for this purpose, Jira Projects utilise a different system for tagging and labelling tickets, this therefore means that the same work tagging each ticket with a label needs to be completed twice, once in the project and once on the issue directly. As a result, the secondary step of retagging issues within the project was often forgotten about, missed or disregarded altogether.  
+Whilst this project has been a single developer operation, should a second developer join the project, the labelling system would make it quick and easy for them to understand ticket priority, effort as well as type, without having to open each ticket individually and read through all the details. However, whilst GitHub labels are useful for this purpose, GitHub Projects utilise a different system for tagging and labelling tickets, this therefore means that the same work tagging each ticket with a label needs to be completed twice, once in the project and once on the issue directly. As a result, the secondary step of retagging issues within the project was often forgotten about, missed or disregarded altogether.  
 
 Upon reflection, the use of GitHub labels in this project has brought significant benefits for efficiency and organisation. Simplifying ticket selection and management through the ability to create custom labels for the project's unique needs. However, the requirement to double tag on both the issue directly and within GitHub Projects limited the efficiency and usability of the sytsem, in future projects it would be beneficial to explore an alternative method that perhaps utilises labels differently to avoid the issue of double tagging.
 
 ### Sizing 👕
-Using custom created labels within Jira, I gave each ticket/issue its own size based on an estimate of the effort required to complete the work, quantity of unknowns involved, as well as the estimated length of time involved to complete the ticket. I decided to utilise fibonacci sequence sizes for my tickets, as this is a simple and repeatable way of assigning effort to tickets which focusses on effort/complexity rather than time. In addition to this, I believe that the increasing gaps between sizes reflects the growing complexities and unknowns as you move up the scale better than that provided by t-shirt sizes which simply utilise XS, S, M, L etc.
+Using custom created labels within GitHub, I gave each ticket/issue its own size based on an estimate of the effort required to complete the work, quantity of unknowns involved, as well as the estimated length of time involved to complete the ticket. I decided to utilise fibonacci sequence sizes for my tickets, as this is a simple and repeatable way of assigning effort to tickets which focusses on effort/complexity rather than time. In addition to this, I believe that the increasing gaps between sizes reflects the growing complexities and unknowns as you move up the scale better than that provided by t-shirt sizes which simply utilise XS, S, M, L etc.
 
 To ensure sizing was as effective as possible, it was important to make sure tasks were sized consistently, to do this, I used the below guide to accurately size each ticket based on the existing system as well as my current knowledge, skills and understanding.
 - 0 - Very simple tasks which are very well understood, and require little to no effort.
@@ -193,75 +197,38 @@ Once the design elements were confirmed, I built a set of designs in Figma repre
 ![Final Design Mobile Comparison](https://github.com/user-attachments/assets/0fb80cd9-f859-4522-8428-aa179c353452)
 
 # Project Development 🧑‍💻
+## Development Overview 🔎
+Once the project planning and design stage was completed, I begun work on developing the currency converter application. The project was first initialised by utilising the "Create React App" maintained by Meta, this provided a foundation application setup with JS, HTML, CSS and Jest for unit testing. With the application initialised, I broke the application into three major subsections, API handling, Business Logic, and User Interface. These subsections were developed independently for a variety of reasons, namely, superior reusability, readability, simplified testing, and better maintainability.
+
+### Project Timeline ⏱️
+The below diagram is a high-level representation of the project development timeline, from the initialisation of the project, through to delivery of the final product.
+![coding timeline drawio](https://github.com/user-attachments/assets/f88bdf3f-3bbd-4ef9-b5b7-f84e07cb1573)
+
+1. **Project Initialisation -** During Project Initialisation I used the tool 'Create React App' (CRA) to initialise a barebones application.
+2. **Testing Setup -** At this stage, Jest was installed, configured and tested to ensure the application was capable of running unit tests which will be written at later stages in the product development timeline.
+3. **UI Testing -** For UI testing, I first identified each of the essential UI components which would be required to meet the requirements confirmed during the project planning phase, as well as the UI design confirmed earlier in the project.
+4. **Adding UI Elements -** Each of the previously identified essential UI components were then added to the project, however these had no styling or functionality applied to them at this stage. This addition enabled the previous tests to begin successfully validating.
+5. **API Testing -** Based on the previously defined project requirements, unit tests were written to cover the expected functionality of the API, including error handling.
+6. **API Functionality -** At this stage, API functionality was added to the project, this enabled the requested of data from the API, as well as the handling of API responses, however it does not include the application of this data within business logic.
+7. **Business Logic Testing -** Fully covering business logic was an important stage of the development process as this is the core of the application, therefore it was important to correctly identify all test cases. At this stage, I worked through the expected flow of data through the currency conversion process, and ensured tests were written for each stage, this ensures that the test suite will detect any subtle issues with the conversion process potentially introduced in future updates.
+8. **Business Logic Implementation -** This stage involved implementing business logic, most notably, the ability to convert currencies, whilst this was not yet integrated with the user interface, I was able to utilise the previously written tests to confirm functionality.
+9. **UI Integration -** Existing UI elements could now be connected to the business logic and API to enable functionality of the application.
+10. **End-To-End Integration -** Once all stages of the application were connected, I could now test and confirm unit tests were working as expected and that the application was sending API requests, as well as calculating conversions correctly based on UI inputs.
+11. **UI Styling -** With the application fully functional, I could now style the application to match the design previously confirmed earlier in the project. This involved styling CSS and modifying the existing UI elements to reproduce the existing design.
+
+## CI/CD Pipeline ⚙️     
+To improve the efficiency of development, I set up a continuous integration and deployment pipeline utilising GitHub actions, not only did this automate the process of deploying my code to the live environment (Hosted on GitHub pages), but it also allowed for the automation of additional code quality and functionality testing. When configuring my CI/CD pipeline, I integrated the previously set up Jest testing framework, this automated the process of running Jest unit tests on each pull request and merge into master. By doing so, I was able to better evaluate whether pull requests were suitable for merging into the main branch without having to run test suites manually. In addition to utilising Jest, I set up and enabled the use of CodeCov, using GitHub Secrets to communicate with the CodeCov platform, this automated code quality assurance checks to measure the percentage of code covered by Jest unit tests. A low score would be a strong indication that a pull request was not yet ready to be merged and should instead be rewritten to better cover functionality with unit tests. The below screenshot provides an example of a PR which failed CodeCov assurance tests which resulted in additional changes being made to ensure full code coverage before the PR was allowed to be merged.  
+![codecov failure](https://github.com/user-attachments/assets/1df7b128-256b-469d-a9b5-fde4269f9a02)
+
+The below screenshot shows the CI/CD pipeline running unit tests and confirming a fully passing set of test suites. There are a total of four suites of tests:
+1. UI Tests
+2. API Handling
+3. API Request Building/Response Parsing
+4. Business Logic (Currency Converting)
+   
+![successful tests](https://github.com/user-attachments/assets/5d895b03-3a53-4e07-8168-f4ef89ea8492)
 
 
-# Getting Started with Create React App
+## Test Driven Development 🧪
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
