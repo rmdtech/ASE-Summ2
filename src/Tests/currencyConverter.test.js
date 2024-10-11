@@ -13,12 +13,12 @@ jest.mock('../Components/exchangeRateRequestBuilder', () => ({
 }));
 
 
-describe('currencyConverter', () => {
+describe('currencyConverter logic', () => {
     beforeEach(() => {
         fetch.resetMocks();
     });
 
-    it('converts currency successfully with valid inputs', async () => {
+    test('converts currency successfully with valid inputs', async () => {
         // Mock the exchange rate
         const fromCurrency = 'USD';
         const toCurrency = 'EUR';
@@ -82,6 +82,131 @@ describe('currencyConverter', () => {
         expect(result).toBeNull();
         expect(message).toBe(error)
     });
+
+});
+
+describe('currencyConverter example use cases', () => {
+    beforeEach(() => {
+        fetch.resetMocks();
+    });
+
+    test('converts currency successfully with valid positive inputs', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(2); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'USD';
+        const toCurrency = 'EUR';
+        const amount = 200;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(400); // 200 * 2
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid positive inputs v2', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(5); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = 1000;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(5000); // 1000 * 5
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid negative inputs', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(2); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'USD';
+        const toCurrency = 'EUR';
+        const amount = -200;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(-400); // -200 * 2
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid negative inputs v2', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(5); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = -1000;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(-5000); // -1000 * 5
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid zero input', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(5); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = 0;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(0); // 0 * 5
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid negative zero input', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(5); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = -0;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(-0); // -0 * 5
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid decimal input', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(2); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = 2.5;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(5); // 2.5 * 2
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid small input', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(2); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = 0.00000000000000001;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(0.00000000000000002); // 0.00000000000000001 * 2
+        expect(message).toBe('Success');
+    });
+
+    test('converts currency successfully with valid large input', async () => {
+        exchangeRateRequestBuilder.getExchangeRate.mockResolvedValue(2); // Mock conversion success
+        // Mock the exchange rate
+        const fromCurrency = 'GBP';
+        const toCurrency = 'EUR';
+        const amount = 1000000000000000000000000000000000;
+
+        const [result, message] = await convertCurrency(fromCurrency, toCurrency, amount);
+
+        expect(result).toBe(2000000000000000000000000000000000); // 1000000000000000000000000000000000 * 2
+        expect(message).toBe('Success');
+    });
+
 
 });
 
