@@ -10,7 +10,7 @@ describe('httpRequest', () => {
         fetch.resetMocks();
     });
 
-    it('should return data when the API call is successful', async () => {
+    test('should return data when the API call is successful', async () => {
         const mockData = { key: 'value' };
 
         // Mock the successful response

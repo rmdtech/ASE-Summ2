@@ -33,7 +33,7 @@ export async function getCurrencyList() {
 }
 
 export async function getExchangeRate(fromCurrency, toCurrency) {
-
+    //Remove excess characters from query
     fromCurrency = fromCurrency.replace(/(?<=^.{3}).*/, '');
     toCurrency = toCurrency.replace(/(?<=^.{3}).*/, '');
 

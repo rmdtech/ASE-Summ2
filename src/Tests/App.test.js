@@ -216,7 +216,7 @@ describe('Test suite confirms functionality of critical UI elements', () => {
 
     });
 
-    it('should handle conversion failure and show an error message', async () => {
+    test('should handle conversion failure and show an error message', async () => {
         // Mock the currency list response
         exchangeRateRequestBuilder.getCurrencyList.mockResolvedValue(['USD', 'EUR']);
 
@@ -323,7 +323,7 @@ describe('Test suite confirms functionality of critical UI elements', () => {
         expect(amountInput.value).toBe('100');
     });
 
-    it('should display error message when amount is invalid', async () => {
+    test('should display error message when amount is invalid', async () => {
         // Mock the currency list response
         exchangeRateRequestBuilder.getCurrencyList.mockResolvedValue(['USD', 'EUR', 'GBP']);
 
@@ -348,7 +348,7 @@ describe('Test suite confirms functionality of critical UI elements', () => {
         });
     });
 
-    it('swaps the fromCurrency and toCurrency when Swap button is clicked', async () => {
+    test('swaps the fromCurrency and toCurrency when Swap button is clicked', async () => {
         exchangeRateRequestBuilder.getCurrencyList.mockResolvedValue(['USD', 'EUR', 'GBP']);
 
         render(<App />);

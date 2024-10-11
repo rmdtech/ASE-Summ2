@@ -11,7 +11,7 @@ describe('getCurrencyList', () => {
         fetch.resetMocks();
     });
 
-    it('should return currency data when called', async () => {
+    test('should return currency data when called', async () => {
         const mockData = { usd: 'United States Dollar', gbp: 'British Pound' };
 
         // Mock the successful response
@@ -22,7 +22,7 @@ describe('getCurrencyList', () => {
         expect(data).toBeTruthy();
     });
 
-    it('should filter out non-currencies/cryptocurrencies', async () => {
+    test('should filter out non-currencies/cryptocurrencies', async () => {
         const mockData = { usd: 'United States Dollar', gbp: 'British Pound', btc: 'bitcoin' };
 
         // Mock the successful response
@@ -36,7 +36,7 @@ describe('getCurrencyList', () => {
         expect(data).toContain('GBP: British Pound'); //Fiat currency still included
     });
 
-    it('should filter out entries with missing values', async () => {
+    test('should filter out entries with missing values', async () => {
         const mockData = { usd: null, gbp: undefined, eur: '' };
 
         // Mock the successful response
@@ -49,7 +49,7 @@ describe('getCurrencyList', () => {
         expect(data).not.toContain('EUR: ');
     });
 
-    it('should set JSON keys to uppercase before stringifying', async () => {
+    test('should set JSON keys to uppercase before stringifying', async () => {
         const mockData = { usd: 'United States Dollar', gbp: 'British Pound' };
 
         // Mock the successful response
@@ -63,7 +63,7 @@ describe('getCurrencyList', () => {
         expect(data).toContain('GBP: British Pound'); //uppercase version
     });
 
-    it('should handle an empty response', async () => {
+    test('should handle an empty response', async () => {
         const mockData = {};
 
         // Mock the successful response
@@ -80,7 +80,7 @@ describe('getExchangeRate', () => {
         fetch.resetMocks();
     });
 
-    it('should return the correct exchange rate when found', async () => {
+    test('should return the correct exchange rate when found', async () => {
         const mockData = {
             usd: { eur: 0.85 }
         };
@@ -93,7 +93,7 @@ describe('getExchangeRate', () => {
         expect(exchangeRate).toBe(0.85);
     });
 
-    it('should return "Exchange Rate not found" if the rate is missing', async () => {
+    test('should return "Exchange Rate not found" if the rate is missing', async () => {
         const mockData = {
             usd: { gbp: 0.75 }
         };
@@ -106,7 +106,7 @@ describe('getExchangeRate', () => {
         expect(exchangeRate).toBe("Exchange Rate not found");
     });
 
-    it('should handle lowercase inputs and return the correct exchange rate', async () => {
+    test('should handle lowercase inputs and return the correct exchange rate', async () => {
         const mockData = {
             usd: { eur: 0.85 }
         };
@@ -119,7 +119,7 @@ describe('getExchangeRate', () => {
         expect(exchangeRate).toBe(0.85);
     });
 
-    it('should handle uppercase inputs and return the correct exchange rate', async () => {
+    test('should handle uppercase inputs and return the correct exchange rate', async () => {
         const mockData = {
             usd: { eur: 0.85 }
         };
@@ -132,7 +132,7 @@ describe('getExchangeRate', () => {
         expect(exchangeRate).toBe(0.85);
     });
 
-    it('should handle an empty response and return "Exchange Rate not found"', async () => {
+    test('should handle an empty response and return "Exchange Rate not found"', async () => {
         const mockData = {
             usd: {}
         };
@@ -145,7 +145,7 @@ describe('getExchangeRate', () => {
         expect(exchangeRate).toBe("Exchange Rate not found");
     });
 
-    it('should handle non-existing currency data and return "Exchange Rate not found"', async () => {
+    test('should handle non-existing currency data and return "Exchange Rate not found"', async () => {
         const mockData = {};
 
         // Mock the successful response

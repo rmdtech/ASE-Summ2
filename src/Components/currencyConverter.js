@@ -1,6 +1,7 @@
 import { getExchangeRate } from './exchangeRateRequestBuilder'
 
 export async function convertCurrency(fromCurrency, toCurrency, amount) {
+    //Removes extra characters so that only the 3 digit ISO code is used
     fromCurrency = fromCurrency.replace(/(?<=^.{3}).*/, '');
     toCurrency = toCurrency.replace(/(?<=^.{3}).*/, '');
 
