@@ -230,5 +230,8 @@ The below screenshot shows the CI/CD pipeline running unit tests and confirming 
 
 
 ## Test Driven Development 🧪
+I utilised Test Driven Development for the development of this project. To this end, I wrote unit tests prior to developing functionality, this helped to clarify requirements but also provide immediate feedback on code functionality by highlighting any code which is not working as unexpected.  
+A significant volume of the created unit tests covered the core business functionality of currency conversion, a basic example of this is a happy path currency conversion as shown below:  
+![test example](https://github.com/user-attachments/assets/5e618455-bc51-47e9-b76c-78356cb38e5c)  
 
-
+In this test, a mock of the exchange rate fetching mechanism is run, the reason for this is that we do not want to actually test the exchange rate fetching mechanism in this specific unit test. The rest of the values are given as basic, expected values, this test confirms that the primary use case is functional, whilst other more specific tests are used for testing edge cases and errors.
